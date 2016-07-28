@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<!--
+ * Myprofile
+ * Copyright 2016.
+ * Author: Kavitha Rani M R <kavitharanitechie.com>
+ */
+-->
+<head>
+<!--Metadata starts-->
+<meta charset="UTF-8">
+<meta name="description" content="Kavitha Rani Techie">
+<meta name="keywords" content="Kavitha Techie,Web Developer">
+<meta name="author" content="Kavitha Rani">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--metadata ends-->
+<title>Kavitha Rani Techie's Profile</title>
+<!--favicon-->
+<link rel="shortcut icon" href="f:/mysite/favicon-96x96.png" >
+<!--bootstrap style-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+/*navbar*/
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:	#778899 ;
+   
+}
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color:#000000;}
+
+ul.topnav li.right {float: right;}
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
+h3
+{
+	font-family:Monotype Corsiva;text-align:center;
+}
+/*background setting for profile image*/
+.bg-1 { 
+    /*background-color: #1abc9c; /* Green */
+    background-image: url("f:/mysite/images/bg0.jpg");
+    color: #ffffff;
+}
+.container-fluid {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+    /*font: 20px sans-serif;
+    line-height: 1.8;
+    color: #ffffff;*/
+    background: #E0FFFF;
+}
+
+/*timeline style*/
+.margin {margin-bottom: 45px;}
+section#timeline {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+}
+section#timeline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0 0 0 -1px;
+  width: 2px;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+section#timeline article {
+  width: 100%;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+section#timeline article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+section#timeline article div.inner {
+  width: 40%;
+  float: left;
+  margin: 5px 0 0 0;
+  border-radius: 6px;
+}
+section#timeline article div.inner span.date {
+  display: block;
+  width: 60px;
+  height: 50px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -32px;
+  border-radius: 100%;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #25303B;
+  color: rgba(255,255,255,0.5);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 0 7px #25303B;
+}
+section#timeline article div.inner span.date span {
+  display: block;
+  text-align: center;
+}
+section#timeline article div.inner span.date span.day {
+  font-size: 10px;
+}
+section#timeline article div.inner span.date span.month {
+  font-size: 18px;
+}
+section#timeline article div.inner span.date span.year {
+  font-size: 10px;
+}
+section#timeline article div.inner h2 {
+  padding: 15px;
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+section#timeline article div.inner h2:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -5px;
+    width: 10px; 
+      height: 10px;
+  -webkit-transform: rotate(-45deg);
+}
+section#timeline article div.inner p {
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #656565;
+  border-radius: 0 0 6px 6px;
+}
+section#timeline article:nth-child(2n+2) div.inner {
+  float: right;
+}
+section#timeline article:nth-child(2n+2) div.inner h2:after {
+  left: -5px;
+}
+section#timeline article:nth-child(1) div.inner h2 {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(1) div.inner h2:after {
+  background: #e74c3c;
+}
+section#timeline article:nth-child(2) div.inner h2 {
+  background: #2ecc71;
+}
+section#timeline article:nth-child(2) div.inner h2:after {
+  background: #2ecc71;
+}
+section#timeline article:nth-child(3) div.inner h2 {
+  background: #e67e22;
+}
+section#timeline article:nth-child(3) div.inner h2:after {
+  background: #e67e22;
+}
+section#timeline article:nth-child(4) div.inner h2 {
+  background: #1abc9c;
+}
+section#timeline article:nth-child(4) div.inner h2:after {
+  background: #1abc9c;
+}
+section#timeline article:nth-child(5) div.inner h2 {
+  background: #9b59b6;
+}
+section#timeline article:nth-child(5) div.inner h2:after {
+  background: #9b59b6;
+}
+section#timeline article:nth-child(6) div.inner h2 {
+  background: #4169E1;
+}
+section#timeline article:nth-child(6) div.inner h2:after {
+  background: #4169E1;
+}
+section#timeline article:nth-child(7) div.inner h2 {
+  background: #FF69B4;
+}
+section#timeline article:nth-child(7) div.inner h2:after {
+  background: #FF69B4;
+}
+
+
+</style>
+</head>
+
+
+<body>
+!-- main navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="main-nav" role="navigation">
+                <!-- navigation links -->
+<div class="collapse navbar-collapse main-nav-collapse">
+<ul class="topnav">
+  <li><a class="active" href="f:/mysite/update.html">Home</a></li>
+  <li><a href="#about-me">About Me</a></li>
+  <li><a href="#timeline">Timeline</a></li>
+   <li><a href="#projects">Projects</a></li>
+  <li class="right"><a href="#contact-me">Contact Me</a></li>
+</ul>
+ <!--</div>-->
+ </nav>
+<!--top profile setting-->
+<div class="container-fluid bg-1 text-center">
+<h3 class="margin"><b>Kavitha Rani M R</b></h3>
+<img src="f:/mysite/images/profile-picture3.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Kavitha" width="350" height="350">
+<h3><b>A Web Developer From Earth</b></h3>
+<a href="https://docs.google.com/document/d/1gXbmFpXF4ZZhYeYH1irCyj8NTGVy7W0mK63UvKhAAJA/edit?usp=sharing" target="_blank" class="btn btn-success" style="font-family:serif;">DOWNLOAD RESUME</a>   
+</div>
+<!--about me-->
+<section class="section about-me" id="about-me">
+    <div class="container">
+        <h2 class="heading" style="font-family:serif;text-align:center;"><b>ABOUT ME</b></h2>
+            <div align="justify">
+                <p> Hi I am Kavitha Rani.M.R., I'm a Post Graduate in Computer Science and Engineering from KLN College of Enginnering. I live in Madurai,India.I am very much interested in Open Source software's and projects.I have done intensive programming on several languages and UI development is my all time favourite</p>
+                <p>I have done lot of work on Web Development. I don't want to commit myself as a system developer so my free time I am doing lots of cool website designing, contributing to the open source. I believe the women have capability to work on advanced research field. So I am the initiator for Spoken Tutorial Project of IIT Bombay in our college Which is "TALK TO A TEACHER PROJECT" more than 250 girls from ULTRA College Of Enginnering and Technology For Women got benefit from this project.I have completed my Bachelors Degree in Computer Science and Engineering from UCETW.I have attended "Grace Hopper Celebartion of India 2015" an International Level Women Technologist Meet Conducted by Anita Borg Institute,Bangalore. 
+                 </p>
+            </div>
+    </div>
+</section>
+<!--skills-->
+<section id="skills">
+  <div class="container">
+    <h2 style="text-align:center;font-family: serif;"><b>MY SKILLS</b></h2>
+     <div class="progress">
+         <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">HTML5 60%</div>
+        </div>
+  
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">CSS 50% </div>
+        </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">JS 30% </div>
+        </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">Ruby 20% </div>
+        </div>
+
+  
+    <div class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style= "width:50%">JAVA 50% </div>
+      </div>
+    </div>
+</div>
+
+<!--timeline-->
+</section>
+
+    <h2 class="heading" style="font-family:serif;text-align:center;"><b>TIME LINE</b></h2>
+    <section id="timeline">
+    <article>
+    <div class="inner">
+      <span class="date">
+        <!--<span class="day">30<sup>th</sup></span>-->
+        <span class="month">JUNE</span>
+        <span class="year">2016</span>
+      </span>
+      <h2>POST GRADUATE</h2>
+      <p>KLNCE</p>
+      <p>Completed My Post Graduate Degree in M.E Computer Science and Engineering</p>
+    </div>
+    </article>
+    <article>
+    <div class="inner">
+      <span class="date">
+        <!--<span class="day">30<sup>th</sup></span>-->
+        <span class="month">May</span>
+        <span class="year">2014</span>
+      </span>
+      <h2>UNDER GRADUATE</h2>
+      <p>UCETW</p>
+      <p>Completed My Under Graduate Degree in B.E Computer Science and Engineering</p>
+    </div>
+    </article>
+    <article>
+    <div class="inner">
+      <span class="date">
+        <!--<span class="day">30<sup>th</sup></span>-->
+        <span class="month">Mar</span>
+        <span class="year">2010</span>
+      </span>
+      <h2>COMPLETED HSS</h2>
+      <p>SOURASHTRA GIRLS HIGHER SECONDARY SCHOOL</p>
+      <p>In my schooling through high school, I excelled mainly in chemistry, physics maths and computer science</p>
+    </div>
+    </article>
+    <article>
+    <div class="inner">
+      <span class="date">
+        <!--<span class="day">26<sup>th</sup></span>-->
+        <span class="month">Mar</span>
+        <span class="year">2008</span>
+      </span>
+      <h2>COMPLETED SSLC</h2>
+      <p>SOURASHTRA GIRLS HIGHER SECONDARY SCHOOL</p>
+      <p>first step towards my passion</p>
+    </div>
+    </article>
+    <article>
+    <div class="inner">
+      <span class="date">
+        <!--<span class="day">26<sup>th</sup></span>-->
+        <span class="month">June</span>
+        <span class="year">2000</span>
+      </span>
+      <h2>MIDDLE SCHOOL</h2>
+      <p>SOURASHTRA GIRLS HIGHER SECONDARY SCHOOL</p>
+      <p>Education is the most powerful weapon which you can use to change the world...</p>
+    </div>
+    </article>
+    <article>
+    <div class="inner">
+      <span class="date">
+        <!--<span class="day">26<sup>th</sup></span>-->
+        <span class="month">June</span>
+        <span class="year">1995</span>
+      </span>
+      <h2>STARTED MY SCHOOLING</h2>
+      <p>SRI RAMAKRISHNA MATH SARADHA VIDHYALAYA</p>
+      <p>A child without education is like a bird without wings...</p>
+    </div>
+   </article>
+  <article>
+    <div class="inner">
+      <span class="date">
+        <span class="month">Mar</span>
+        <span class="year">1992</span>
+      </span>
+      <h2>I WAS BORN</h2>
+      <p>A man is great by deeds, not by birth.</p>
+    </div>
+  </article>
+</section>
+
+<!--Projects-->
+<section class="section professional" id="projects">
+    <div class="container">
+        <h2 class="heading" style="font-family:serif;text-align:center;"><b>PROJECTS</b></h2>
+        <div class="panel panel-default">
+            <!-- /.panel-Heading -->
+        <div class="panel-heading">
+        <i class="fa fa-bar-chart-o fa-fw"></i><b>Project Details</b>
+        </div>
+        <div class="panel-body">
+        <div class="panel panel-success">
+        <div class="panel-heading" style="font-family:sans-serif;"><b>Post Graduate Project</b></div>
+        <div class="panel-body" style="font-family:sans-serif;"><b>Project Title:</b>User Revocation Based Anonymous Access Provision for Efficient Cloud User Privacy.</div>
+        <div class="panel-body" style="font-family:sans-serif;"><b>Techonology used:</b> Java,Netbeans,Mysql</div>
+        <div class="panel-body" style="font-family:sans-serif;"><b>Responsibilites:</b><ul><li type="circle;">Understanding the Requirements</li>
+        <li type="circle;">Frontend and Backend Work</li><li type="circle;">System Testing and documentation</li></ul>
+        </div>
+        </div>
+<div class="panel panel-info">
+    <div class="panel-heading" style="font-family:sans-serif;"><b>Under Graduate Project</b></div>
+    <div class="panel-body" style="font-family:sans-serif;"><b>Project Title:</b>Implementation of Participatory Privacy in Mobile Phones Using Identity Based Encryption</div>
+    <div class="panel-body" style="font-family:sans-serif;"><b>Techonology used:</b> Java,Netbeans,Mysql</div>
+        <div class="panel-body" style="font-family:sans-serif;"><b>Responsibilites:</b><ul><li type="circle;">Understanding the Requirements</li><li type="circle;">Frontend design</li><li type="circle;">Testing and documentation</li></ul>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- contacts -->
+<section class="section professional" id="contact-me">
+    <div class="container">
+     <h2 class="heading" style="font-family:serif;text-align:center;"><b>CONTACT ME</b></h2>
+      <div class="panel panel-default">
+ <!-- /.panel-Heading -->
+      <div class="panel-body">
+      <center><p class="num"><span class="mute"><i class="fa fa-envelope"></i></span><b>Email me:</b><a href="#" >mkavitharaniravindran@gmail.com</a></p></center>
+      </div>
+      <address>
+        <div class="btn-group btn-group-justified">
+          <center>
+          <a href="http://in.linkedin.com/pub/kavitha-rani/74/6/959" class="btn btn-info">LinkedIn</a>
+          <a href="https://plus.google.com/u/0/+KAVITHARANIRAVINDRAN/posts/p/pub" class="btn btn-info">Google+</a>
+          <a href="https://twitter.com/manicka_kavitha" class="btn btn-info">Twitter</a>
+          <a href="https://github.com/Kavitha-Rani" class="btn btn-info">Github</a>
+          </center>
+        </div>
+      </div>
+      </address>
+</section>
+
+<!--footer-->
+<section>
+<footer style="font-family:serif;background-color:#778899;color:white;padding:5px;">
+    <center><p>My Personalsite Developed by Me</p></center>
+    <center><p>Copyright &copy 2016 www.kavitharanitechie.com</p></center>
+</footer>
+</section>
+</body>
+</html>
+
